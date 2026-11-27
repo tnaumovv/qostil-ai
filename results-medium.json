@@ -1,0 +1,52 @@
+{
+  "model": "medium",
+  "device": "cpu",
+  "compute_type": "int8",
+  "language": "auto",
+  "normalization": "lowercase, remove punctuation, normalize whitespace",
+  "overall_wer": 0.4838709677419355,
+  "word_errors": 15,
+  "reference_words": 31,
+  "recordings": [
+    {
+      "file": "sample.m4a",
+      "language": "ru",
+      "reference": "Бүгін университетке бардым, потом мы с друзьями готовились к экзамену",
+      "prediction": "Университет Кеварда. Потом мы с друзьями готовились к экзамену.",
+      "wer": 0.3,
+      "substitutions": 2,
+      "deletions": 1,
+      "insertions": 0
+    },
+    {
+      "file": "sample2.m4a",
+      "language": "kk",
+      "reference": "Мне подарили кота, и ол маған қатты ұнайды",
+      "prediction": "Мне подырилек ката и ал маң қаттын айды...",
+      "wer": 0.75,
+      "substitutions": 6,
+      "deletions": 0,
+      "insertions": 0
+    },
+    {
+      "file": "sample3.m4a",
+      "language": "ru",
+      "reference": "Сен өте әдемісің, откуда ты?",
+      "prediction": "Всем уйти, Адемисон. Откуда ты?",
+      "wer": 0.6,
+      "substitutions": 3,
+      "deletions": 0,
+      "insertions": 0
+    },
+    {
+      "file": "sample4.m4a",
+      "language": "ru",
+      "reference": "Чем вам я могу помочь, айтып жібере аласызба?",
+      "prediction": "Чем вам я могу помочь? А это жрелосба.",
+      "wer": 0.375,
+      "substitutions": 3,
+      "deletions": 0,
+      "insertions": 0
+    }
+  ]
+}

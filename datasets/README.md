@@ -1,0 +1,23 @@
+# Данные QosTil
+
+Готовые архивы доступны в [релизе `qostil-data-v0.1`](https://github.com/tnaumovv/qostil-ai/releases/tag/qostil-data-v0.1). Сверить скачанные файлы можно по [контрольным суммам](SHA256SUMS).
+
+| Архив | Состав | Назначение |
+| --- | --- | --- |
+| [`qostil-smoke.zip`](https://github.com/tnaumovv/qostil-ai/releases/download/qostil-data-v0.1/qostil-smoke.zip) | Четыре исходные записи QosTil и расшифровки из `references.json` | Проверка загрузки, обучения и сохранения на одном шаге |
+| [`qostil-ksc2-podcasts-2h.zip`](https://github.com/tnaumovv/qostil-ai/releases/download/qostil-data-v0.1/qostil-ksc2-podcasts-2h.zip) | 1 177 клипов из подкастов KSC2, `metadata.csv`, сведения об отборе и атрибуция | Первый эксперимент с дообучением |
+| [`qostil-public-eval.zip`](https://github.com/tnaumovv/qostil-ai/releases/download/qostil-data-v0.1/qostil-public-eval.zip) | 31 WAV, 3 мин 42 с из двух видео, дословные эталоны и исходная атрибуция | Дополнительная проверка ошибок на публичных примерах |
+
+В пробном ZIP разбивка 2/1/1 сделана по техническим группам. В KSC2 сохранены разделы корпуса. Колонка `speaker_id` содержит идентификатор выпуска, поэтому разбиение гарантирует раздельность выпусков и допускает повторение голоса в разных выпусках.
+
+## Подкасты KSC2
+
+| Раздел | Клипы | Выпуски | Длительность |
+| --- | ---: | ---: | ---: |
+| Обучение | 1 104 | 49 | 2 ч 00 мин 03 с |
+| Валидация | 25 | 4 | 3 мин 02 с |
+| Тест | 48 | 5 | 6 мин 26 с |
+
+Из несжатого зеркала по HTTP Range получено около 4,1 ГБ. Аудио FLAC в 16 кГц взято из зеркала, тексты ранее прошли редактуру пунктуации и написания через Gemma. Клипы отобраны автоматически по языковым признакам с выборочной проверкой расшифровок. Внутри ZIP сохранены исходные идентификаторы, разделы корпуса, критерии отбора и ссылки для атрибуции. Аудио, длительности, длины токенов и отсутствие идентичных аудиофайлов между разделами проверены локально. [KSC2 от ISSAI](https://issai.nu.edu.kz/kz-speech-corpus/) · [Зеркало InflexionLab](https://huggingface.co/datasets/InflexionLab/ISSAI-KSC2-Structured) · [Языковые признаки](https://github.com/AskhaYergali/kazakh-spontaneous-speech)
+
+Публичный набор содержит дословные расшифровки Timur Seidalin. Ссылки на исходные аудио CC BY сохранены в `metadata.csv`. [Карточка бенчмарка](https://huggingface.co/datasets/Tim2190/kazakh-codeswitch-asr)

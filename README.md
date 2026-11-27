@@ -28,9 +28,9 @@ python transcribe.py --help
 
 ## Дообучение Whisper в Colab
 
-Открой [ноутбук QosTil](notebooks/QosTil_Whisper_Small.ipynb) в Google Colab и выбери среду с GPU. [Готовые ZIP и происхождение данных](datasets/README.md) и [заметки об экспериментах](docs/experiments.md) хранятся отдельно.
+Открой [ноутбук QosTil](notebooks/QosTil_Whisper_Small.ipynb) в Google Colab и выбери среду с GPU. [Описание данных и контрольные суммы](datasets/README.md) и [заметки об экспериментах](docs/experiments.md) хранятся отдельно.
 
-В ячейке загрузки выбери архив из релиза. При загрузке через панель **Files → Upload to session storage** можно указать его путь в среде и распаковать файл вручную. Следующий пример подходит для ZIP подкастов. После распаковки продолжай с ячейки проверки разметки.
+В ячейке загрузки выбери локальный ZIP с датасетом. При загрузке через панель **Files → Upload to session storage** можно указать его путь в среде и распаковать файл вручную. Следующий пример подходит для ZIP подкастов. После распаковки продолжай с ячейки проверки разметки.
 
 ```python
 from google.colab import files
